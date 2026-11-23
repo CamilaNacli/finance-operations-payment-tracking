@@ -159,7 +159,7 @@ body:has(#fin) .has-global-padding{padding-left:0!important;padding-right:0!impo
   let ALL = [], months = [], cur = REF.slice(0, 7), fStatus = '', fCat = '', open = new Set();
 
   const parseCSV = t => { const out = []; let row = [], f = '', q = false; for (let i = 0; i < t.length; i++) { const c = t[i];
-      if (q) { if (c === '"' && t[i + 1] === '"') { f += '"'; i++; } else if (c === '"') q = false; else f += c; }
+      if (q) { if (c === '"') { if (t[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
       else if (c === '"') q = true; else if (c === ',') { row.push(f); f = ''; } else if (c === '\n') { row.push(f); out.push(row); row = []; f = ''; } else if (c !== '\r') f += c; }
     if (f || row.length) { row.push(f); out.push(row); } return out; };
   // amounts may come as 1234.56, 1,234.56 or 1.234,56 depending on the spreadsheet locale
