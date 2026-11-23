@@ -1,0 +1,121 @@
+Expense ID,Description,Category,Payment Owner,Payment Method,Frequency,Due Date,Amount (USD),Paid Date,Status,Due Month,Notes
+EXP-2606-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-06-01,320.00,2026-06-01,Paid,2026-06,
+EXP-2606-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-03,389.00,2026-06-02,Paid,2026-06,
+EXP-2606-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-06-05,4800.00,2026-06-04,Paid,2026-06,Monthly team payment
+EXP-2606-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-06-05,3900.00,2026-06-04,Paid,2026-06,Monthly team payment
+EXP-2606-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-06-05,3400.00,2026-06-04,Paid,2026-06,Monthly team payment
+EXP-2606-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-06-05,2900.00,2026-06-04,Paid,2026-06,Monthly team payment
+EXP-2606-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-06-05,2500.00,2026-06-05,Paid,2026-06,Monthly team payment
+EXP-2606-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-07,99.00,2026-06-06,Paid,2026-06,
+EXP-2606-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-08,145.00,2026-06-08,Paid,2026-06,
+EXP-2606-10,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-06-10,450.00,2026-06-10,Paid,2026-06,
+EXP-2606-11,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-12,30.00,2026-06-12,Paid,2026-06,
+EXP-2606-12,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-14,96.00,2026-06-13,Paid,2026-06,
+EXP-2606-13,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-16,16.00,2026-06-16,Paid,2026-06,
+EXP-2606-14,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-18,22.00,2026-06-17,Paid,2026-06,
+EXP-2606-15,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-20,297.00,2026-06-20,Paid,2026-06,
+EXP-2606-16,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-22,20.00,2026-06-21,Paid,2026-06,
+EXP-2606-17,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-06-25,59.00,2026-06-25,Paid,2026-06,
+EXP-2606-18,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-06-27,398.02,2026-06-27,Paid,2026-06,Variable amount
+EXP-2606-19,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-06-28,35.00,2026-06-28,Paid,2026-06,
+EXP-2607-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-07-01,320.00,2026-07-01,Paid,2026-07,
+EXP-2607-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-03,389.00,2026-07-03,Paid,2026-07,
+EXP-2607-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-07-05,4800.00,2026-07-05,Paid,2026-07,Monthly team payment
+EXP-2607-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-07-05,3900.00,2026-07-05,Paid,2026-07,Monthly team payment
+EXP-2607-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-07-05,3400.00,2026-07-04,Paid,2026-07,Monthly team payment
+EXP-2607-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-07-05,2900.00,2026-07-05,Paid,2026-07,Monthly team payment
+EXP-2607-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-07-05,2500.00,2026-07-04,Paid,2026-07,Monthly team payment
+EXP-2607-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-07,99.00,2026-07-06,Paid,2026-07,
+EXP-2607-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-08,145.00,2026-07-08,Paid,2026-07,
+EXP-2607-10,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-07-10,450.00,2026-07-10,Paid,2026-07,
+EXP-2607-11,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-12,30.00,2026-07-12,Paid,2026-07,
+EXP-2607-12,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-14,96.00,2026-07-14,Paid,2026-07,
+EXP-2607-13,Legal Retainer (quarterly),Operating Costs,Founder,Bank transfer,Quarterly,2026-07-15,600.00,2026-07-15,Paid,2026-07,
+EXP-2607-14,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-16,16.00,2026-07-16,Paid,2026-07,
+EXP-2607-15,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-18,22.00,2026-07-17,Paid,2026-07,
+EXP-2607-16,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-20,297.00,2026-07-24,Paid,2026-07,Paid late
+EXP-2607-17,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-22,20.00,2026-07-21,Paid,2026-07,
+EXP-2607-18,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-07-25,59.00,2026-07-24,Paid,2026-07,
+EXP-2607-19,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-07-27,413.08,2026-07-27,Paid,2026-07,Variable amount
+EXP-2607-20,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-07-28,35.00,2026-07-28,Paid,2026-07,
+EXP-2608-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-08-01,320.00,2026-07-31,Paid,2026-08,
+EXP-2608-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-03,389.00,2026-08-02,Paid,2026-08,
+EXP-2608-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-08-05,4800.00,2026-08-05,Paid,2026-08,Monthly team payment
+EXP-2608-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-08-05,3900.00,2026-08-05,Paid,2026-08,Monthly team payment
+EXP-2608-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-08-05,3400.00,2026-08-04,Paid,2026-08,Monthly team payment
+EXP-2608-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-08-05,2900.00,2026-08-04,Paid,2026-08,Monthly team payment
+EXP-2608-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-08-05,2500.00,2026-08-04,Paid,2026-08,Monthly team payment
+EXP-2608-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-07,99.00,2026-08-07,Paid,2026-08,
+EXP-2608-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-08,145.00,2026-08-08,Paid,2026-08,
+EXP-2608-10,Domain Renewal (annual),Tools & Subscriptions,Operations Assistant,Credit card,Annual,2026-08-09,45.00,2026-08-08,Paid,2026-08,
+EXP-2608-11,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-08-10,450.00,2026-08-09,Paid,2026-08,
+EXP-2608-12,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-12,30.00,2026-08-11,Paid,2026-08,
+EXP-2608-13,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-14,96.00,2026-08-14,Paid,2026-08,
+EXP-2608-14,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-16,16.00,2026-08-15,Paid,2026-08,
+EXP-2608-15,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-18,22.00,2026-08-17,Paid,2026-08,
+EXP-2608-16,Business Insurance (annual),Operating Costs,Founder,Bank transfer,Annual,2026-08-20,210.00,2026-08-19,Paid,2026-08,
+EXP-2608-17,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-20,297.00,2026-08-19,Paid,2026-08,
+EXP-2608-18,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-22,20.00,2026-08-21,Paid,2026-08,
+EXP-2608-19,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-08-25,59.00,2026-08-24,Paid,2026-08,
+EXP-2608-20,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-08-27,405.73,2026-08-27,Paid,2026-08,Variable amount
+EXP-2608-21,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-08-28,35.00,2026-08-27,Paid,2026-08,
+EXP-2609-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-09-01,320.00,2026-08-31,Paid,2026-09,
+EXP-2609-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-03,389.00,2026-09-02,Paid,2026-09,
+EXP-2609-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-09-05,4800.00,2026-09-05,Paid,2026-09,Monthly team payment
+EXP-2609-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-09-05,3900.00,2026-09-05,Paid,2026-09,Monthly team payment
+EXP-2609-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-09-05,3400.00,2026-09-05,Paid,2026-09,Monthly team payment
+EXP-2609-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-09-05,2900.00,2026-09-04,Paid,2026-09,Monthly team payment
+EXP-2609-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-09-05,2500.00,2026-09-04,Paid,2026-09,Monthly team payment
+EXP-2609-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-07,99.00,2026-09-07,Paid,2026-09,
+EXP-2609-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-08,145.00,2026-09-08,Paid,2026-09,
+EXP-2609-10,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-09-10,450.00,2026-09-14,Paid,2026-09,Paid late
+EXP-2609-11,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-12,30.00,2026-09-11,Paid,2026-09,
+EXP-2609-12,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-14,96.00,2026-09-13,Paid,2026-09,
+EXP-2609-13,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-16,16.00,2026-09-16,Paid,2026-09,
+EXP-2609-14,Laptop for Video Editing,Operating Costs,Founder,Credit card,One-time,2026-09-18,1450.00,2026-09-17,Paid,2026-09,Equipment purchase
+EXP-2609-15,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-18,22.00,2026-09-18,Paid,2026-09,
+EXP-2609-16,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-20,297.00,2026-09-20,Paid,2026-09,
+EXP-2609-17,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-22,20.00,2026-09-22,Paid,2026-09,
+EXP-2609-18,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-09-25,59.00,2026-09-25,Paid,2026-09,
+EXP-2609-19,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-09-27,470.13,2026-09-27,Paid,2026-09,Variable amount
+EXP-2609-20,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-09-28,35.00,2026-09-28,Paid,2026-09,
+EXP-2610-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-10-01,320.00,2026-09-30,Paid,2026-10,
+EXP-2610-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-03,389.00,2026-10-03,Paid,2026-10,
+EXP-2610-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-10-05,4800.00,2026-10-04,Paid,2026-10,Monthly team payment
+EXP-2610-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-10-05,3900.00,2026-10-04,Paid,2026-10,Monthly team payment
+EXP-2610-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-10-05,3400.00,2026-10-04,Paid,2026-10,Monthly team payment
+EXP-2610-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-10-05,2900.00,2026-10-05,Paid,2026-10,Monthly team payment
+EXP-2610-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-10-05,2500.00,2026-10-05,Paid,2026-10,Monthly team payment
+EXP-2610-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-07,99.00,,Overdue,2026-10,Card declined — follow-up needed
+EXP-2610-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-08,145.00,2026-10-08,Paid,2026-10,
+EXP-2610-10,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-10-10,450.00,2026-10-10,Paid,2026-10,
+EXP-2610-11,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-12,30.00,2026-10-11,Paid,2026-10,
+EXP-2610-12,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-14,96.00,2026-10-13,Paid,2026-10,
+EXP-2610-13,Legal Retainer (quarterly),Operating Costs,Founder,Bank transfer,Quarterly,2026-10-15,600.00,2026-10-14,Paid,2026-10,
+EXP-2610-14,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-16,16.00,2026-10-16,Paid,2026-10,
+EXP-2610-15,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-18,22.00,2026-10-17,Paid,2026-10,
+EXP-2610-16,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-20,297.00,2026-10-20,Paid,2026-10,
+EXP-2610-17,Website Theme License (annual),Tools & Subscriptions,Operations Assistant,Credit card,Annual,2026-10-21,89.00,2026-10-21,Paid,2026-10,
+EXP-2610-18,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-22,20.00,2026-10-21,Paid,2026-10,
+EXP-2610-19,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-10-25,59.00,2026-10-25,Paid,2026-10,
+EXP-2610-20,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-10-27,427.93,2026-10-26,Paid,2026-10,Variable amount
+EXP-2610-21,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-10-28,35.00,2026-10-27,Paid,2026-10,
+EXP-2611-01,Coworking Desk,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-11-01,320.00,2026-11-01,Paid,2026-11,
+EXP-2611-02,Email Marketing Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-03,389.00,2026-11-02,Paid,2026-11,
+EXP-2611-03,Team Member A · Operations Manager,Team Payments,Founder,Bank transfer,Monthly,2026-11-05,4800.00,2026-11-04,Paid,2026-11,Monthly team payment
+EXP-2611-04,Team Member B · Customer Support Lead,Team Payments,Founder,Bank transfer,Monthly,2026-11-05,3900.00,2026-11-05,Paid,2026-11,Monthly team payment
+EXP-2611-05,Team Member C · Video Editor,Team Payments,Founder,Bank transfer,Monthly,2026-11-05,3400.00,2026-11-04,Paid,2026-11,Monthly team payment
+EXP-2611-06,Team Member D · Customer Support Specialist,Team Payments,Founder,Bank transfer,Monthly,2026-11-05,2900.00,2026-11-05,Paid,2026-11,Monthly team payment
+EXP-2611-07,Team Member E · Content Assistant,Team Payments,Founder,Bank transfer,Monthly,2026-11-05,2500.00,2026-11-05,Paid,2026-11,Monthly team payment
+EXP-2611-08,Video Hosting Platform,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-07,99.00,2026-11-07,Paid,2026-11,
+EXP-2611-09,Customer Support Software,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-08,145.00,,Overdue,2026-11,Awaiting invoice approval
+EXP-2611-10,Accounting Services,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-11-10,450.00,,Overdue,2026-11,Awaiting invoice approval
+EXP-2611-11,Design Tool,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-12,30.00,2026-11-11,Paid,2026-11,
+EXP-2611-12,Project Management Workspace,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-14,96.00,2026-11-13,Paid,2026-11,
+EXP-2611-13,Video Conferencing,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-16,16.00,2026-11-14,Paid,2026-11,Paid before due date
+EXP-2611-14,AI Voice Generator,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-18,22.00,,Pending,2026-11,
+EXP-2611-15,Sales Funnel Builder,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-20,297.00,,Pending,2026-11,
+EXP-2611-16,Cloud Storage,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-22,20.00,,Pending,2026-11,
+EXP-2611-17,Website Hosting,Tools & Subscriptions,Operations Assistant,Credit card,Monthly,2026-11-25,59.00,,Pending,2026-11,
+EXP-2611-18,Payment Processing Fees,Operating Costs,Operations Assistant,Automatic debit,Monthly,2026-11-27,464.58,,Pending,2026-11,Variable amount
+EXP-2611-19,Bank Fees,Operating Costs,Operations Assistant,Bank transfer,Monthly,2026-11-28,35.00,,Pending,2026-11,
