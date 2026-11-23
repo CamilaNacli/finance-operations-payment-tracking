@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monthly Invoice — Finance Operations Demo</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;background:#FAF8F3}</style>
+</head>
+<body>
+<!-- WIDGET START -->
+<!-- Finance Operations & Payment Tracking — monthly invoice dashboard (portfolio demo, fictional data, USD).
+     Self-contained: can be pasted into a WordPress "Custom HTML" block. Reads ONLY the demo spreadsheet. -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap');
+body:has(#fin),body:has(#fin) .wp-site-blocks{background:#FAF8F3!important}
+body:has(#fin) .wp-site-blocks{padding-top:0;padding-bottom:0}
+body:has(#fin) .has-global-padding{padding-left:0!important;padding-right:0!important}
+#fin{--bg:#FAF8F3;--navy:#172235;--navy2:#22314B;--gold:#9C7F4F;--gold-d:#765E33;--gold-l:#D4B77E;--ink:#1B2433;--muted:#5E6573;--line:#E7E1D6;--card:#FFFFFF;
+  --paid:#2F7D4E;--paid-bg:#E3F2E8;--pend:#8A5D0E;--pend-bg:#FBF0D9;--over:#B23B30;--over-bg:#FBE4E1;
+  background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:720px;margin:0 auto;padding:18px 16px 40px;box-sizing:border-box;text-align:left}
+#fin *{box-sizing:border-box}
+#fin .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+#fin .top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+#fin .back{color:var(--navy);font-weight:500;font-size:14px;text-decoration:none;padding:8px 0;display:inline-block}
+#fin .back:hover{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
+#fin .pill{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.04em;color:var(--gold-d);background:#F1EADB;border:1px solid #E2D5BB;border-radius:999px;padding:4px 10px}
+#fin h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(28px,7vw,38px);line-height:1.1;color:var(--navy);margin:4px 0 2px}
+#fin .sub{color:var(--muted);font-size:13.5px;margin:0 0 14px}
+#fin .month{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px}
+#fin .month button{width:46px;height:46px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer}
+#fin .month button:disabled{opacity:.35;cursor:default}
+#fin .month .lbl{text-align:center;flex:1}
+#fin .month .lbl b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;color:var(--navy);line-height:1.1}
+#fin .month .lbl span{font-size:11.5px;color:var(--muted)}
+#fin .sum{margin-top:12px;background:var(--navy);color:#fff;border-radius:20px;padding:20px 20px 18px;box-shadow:0 8px 22px rgba(23,34,53,.16)}
+#fin .sum .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-l);font-weight:600}
+#fin .sum .total{font-size:clamp(30px,8.5vw,40px);font-weight:700;font-variant-numeric:tabular-nums;line-height:1.15;margin:2px 0 14px}
+#fin .bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:#33415C;margin-bottom:14px}
+#fin .bar i{display:block;height:100%}
+#fin .bar .p{background:#5FB383} #fin .bar .n{background:var(--gold-l)} #fin .bar .o{background:#E0705F}
+#fin .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#fin .box{background:var(--navy2);border-radius:14px;padding:12px 14px}
+#fin .box .k{color:#AEB8C9}
+#fin .box .v{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+#fin .box .s{font-size:12px;color:#AEB8C9;margin-top:4px}
+#fin .box.open{outline:1px solid rgba(212,183,126,.45)}
+#fin .over{margin-top:8px;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#3A2430;border:1px solid #6B3A3A;border-radius:10px;padding:7px 10px;font-size:12.5px}
+#fin .over b{color:#FFB4A8;font-variant-numeric:tabular-nums}
+#fin .over.none{background:transparent;border-color:#33415C;color:#AEB8C9}
+#fin .check{font-size:12px;color:#AEB8C9;margin-top:12px}
+#fin .check b{color:#9FD8B3;font-weight:600}
+#fin h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;color:var(--navy);margin:26px 0 10px}
+#fin .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+#fin .chip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;min-height:40px;font:600 13px Inter,sans-serif;cursor:pointer}
+#fin .chip[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+#fin select{height:40px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font:13px Inter,sans-serif;padding:0 10px;max-width:100%}
+#fin .list{display:flex;flex-direction:column;gap:8px}
+#fin .item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+#fin .item>button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 14px;cursor:pointer}
+#fin .item>button:focus-visible{outline:3px solid var(--gold);outline-offset:-3px;border-radius:14px}
+#fin .item .d{font-weight:600;color:var(--ink);line-height:1.3}
+#fin .item .m{font-size:12.5px;color:var(--muted)}
+#fin .item .a{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+#fin .badge{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;justify-self:end}
+#fin .b-paid{background:var(--paid-bg);color:var(--paid)} #fin .b-pending{background:var(--pend-bg);color:var(--pend)} #fin .b-overdue{background:var(--over-bg);color:var(--over)}
+#fin .item.is-overdue{border-left:4px solid var(--over)}
+#fin .det{display:none;border-top:1px dashed var(--line);padding:10px 14px 12px;font-size:13px;background:#FDFBF7}
+#fin .item.open .det{display:block}
+#fin .det dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}
+#fin .det dt{color:var(--muted)} #fin .det dd{margin:0;font-weight:500}
+#fin .empty{color:var(--muted);text-align:center;padding:18px;background:#fff;border:1px dashed var(--line);border-radius:14px}
+#fin .chart{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px 10px}
+#fin .chart .what{font-size:12.5px;color:var(--muted);margin:0 0 12px}
+#fin .bars{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;align-items:end;height:180px}
+#fin .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px;cursor:pointer;border:0;background:none;padding:0;font:inherit;color:inherit}
+#fin .col .val{font-size:11px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+#fin .stack{width:100%;max-width:46px;display:flex;flex-direction:column-reverse;border-radius:6px 6px 0 0;overflow:hidden;background:#EFEAE0}
+#fin .stack i{display:block;width:100%}
+#fin .stack .p{background:#5FA27A} #fin .stack .n{background:var(--gold-l)} #fin .stack .o{background:#D9604E}
+#fin .col.sel .stack{outline:2px solid var(--navy);outline-offset:2px}
+#fin .col .ml{font-size:11.5px;color:var(--muted)} #fin .col.sel .ml{color:var(--navy);font-weight:700}
+#fin .col.nodata .stack{background:repeating-linear-gradient(45deg,#EFEAE0,#EFEAE0 4px,#F7F3EC 4px,#F7F3EC 8px)}
+#fin .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:10px}
+#fin .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+#fin .meta{margin-top:26px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+#fin .meta p{margin:0 0 6px}
+#fin .meta b{color:var(--ink);font-weight:600}
+#fin .refresh{border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:10px;padding:8px 12px;min-height:40px;font:600 13px Inter,sans-serif;cursor:pointer}
+#fin .err{background:#FDF0EE;border:1px solid #F3C7C1;color:#A33A30;border-radius:10px;padding:8px 10px;font-size:13px;margin-top:10px}
+#fin .err:empty{display:none}
+#fin a:focus-visible,#fin button:focus-visible,#fin select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (min-width:640px){#fin{padding:28px 20px 48px}#fin .bars{height:210px}}
+@media (prefers-reduced-motion:reduce){#fin *{transition:none!important}}
+</style>
+<div id="fin"
+  data-csv="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0i_42CR9aQeIjDKUPx7SZP8Fq-rjfeLs5BKqHsyvv2WnclcqzeB2fWPcH4sKxpStE-Qfqtwslq9f3/pub?gid=445537128&single=true&output=csv"
+  data-fallback="https://raw.githubusercontent.com/CamilaNacli/finance-operations-payment-tracking/main/data/expenses.csv"
+  data-ref="2026-11-15">
+  <div class="top"><a class="back" href="/portfolio-camila-nacli/finance-operations-payment-tracking/">← Back to project</a><span class="pill">Portfolio demo · Fictional data · USD</span></div>
+  <h1>Monthly Invoice</h1>
+  <p class="sub">Finance Operations &amp; Payment Tracking · a digital products company (fictional)</p>
+
+  <div class="month" role="group" aria-label="Select month">
+    <button type="button" id="finPrev" aria-label="Previous month">‹</button>
+    <div class="lbl" aria-live="polite"><b id="finMonth">—</b><span id="finCount">Loading…</span></div>
+    <button type="button" id="finNext" aria-label="Next month">›</button>
+  </div>
+
+  <section class="sum" aria-label="Invoice summary">
+    <div class="k">Invoice total</div>
+    <div class="total" id="finTotal">—</div>
+    <div class="bar" aria-hidden="true"><i class="p" id="barP"></i><i class="n" id="barN"></i><i class="o" id="barO"></i></div>
+    <div class="row2">
+      <div class="box"><div class="k">Paid</div><div class="v" id="finPaid">—</div><div class="s" id="finPaidN"></div></div>
+      <div class="box open"><div class="k">Open balance</div><div class="v" id="finOpen">—</div><div class="s" id="finPendN"></div></div>
+    </div>
+    <div class="over" id="finOver"></div>
+    <div class="check" id="finCheck"></div>
+  </section>
+  <div class="err" id="finErr" role="alert"></div>
+
+  <h2>Entries this month</h2>
+  <div class="filters" role="group" aria-label="Filter by status">
+    <button type="button" class="chip" data-s="" aria-pressed="true">All</button>
+    <button type="button" class="chip" data-s="Paid" aria-pressed="false">Paid</button>
+    <button type="button" class="chip" data-s="Pending" aria-pressed="false">Pending</button>
+    <button type="button" class="chip" data-s="Overdue" aria-pressed="false">Overdue</button>
+    <label class="sr" for="finCat">Category</label>
+    <select id="finCat"><option value="">All categories</option></select>
+  </div>
+  <div class="list" id="finList"></div>
+
+  <h2>Spending by month</h2>
+  <div class="chart">
+    <p class="what">Sum of <b>Amount (USD)</b> of every obligation due in each month — paid and open — for the selected month and the five months before it. Tap a bar to open that month.</p>
+    <div class="bars" id="finBars"></div>
+    <div class="legend"><span><i style="background:#5FA27A"></i>Paid</span><span><i style="background:#D4B77E"></i>Pending</span><span><i style="background:#D9604E"></i>Overdue</span><span><i style="background:repeating-linear-gradient(45deg,#EFEAE0,#EFEAE0 3px,#F7F3EC 3px,#F7F3EC 6px)"></i>No records</span></div>
+  </div>
+
+  <div class="meta">
+    <p><b>Rules.</b> Paid = a paid date exists · Pending = open and due on or after the reference date · Overdue = open and due before the reference date. Open balance = Pending + Overdue. Entries are grouped by the month of their <b>due date</b>.</p>
+    <p><b>Source:</b> <span id="finSrc">demo spreadsheet</span> · <b>Reference date:</b> <span id="finRef"></span> · <b>Loaded:</b> <span id="finLoaded">—</span></p>
+    <button type="button" class="refresh" id="finRefresh">↻ Refresh data</button>
+  </div>
+</div>
+<script>
+(() => {
+  const root = document.getElementById('fin'); if (!root) return;
+  const $ = id => document.getElementById(id);
+  const REF = root.dataset.ref;
+  const USD = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const monthLabel = m => MON[+m.slice(5, 7) - 1] + ' ' + m.slice(0, 4);
+  const longMonth = m => new Date(m + '-01T00:00:00Z').toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const dateLabel = d => d ? MON[+d.slice(5, 7) - 1] + ' ' + +d.slice(8, 10) + ', ' + d.slice(0, 4) : '';
+  const shiftMonth = (m, k) => { const d = new Date(m + '-01T00:00:00Z'); d.setUTCMonth(d.getUTCMonth() + k); return d.toISOString().slice(0, 7); };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let ALL = [], months = [], cur = REF.slice(0, 7), fStatus = '', fCat = '', open = new Set();
+
+  const parseCSV = t => { const out = []; let row = [], f = '', q = false; for (let i = 0; i < t.length; i++) { const c = t[i];
+      if (q) { if (c === '"' && t[i + 1] === '"') { f += '"'; i++; } else if (c === '"') q = false; else f += c; }
+      else if (c === '"') q = true; else if (c === ',') { row.push(f); f = ''; } else if (c === '\n') { row.push(f); out.push(row); row = []; f = ''; } else if (c !== '\r') f += c; }
+    if (f || row.length) { row.push(f); out.push(row); } return out; };
+  // amounts may come as 1234.56, 1,234.56 or 1.234,56 depending on the spreadsheet locale
+  const num = s => { s = String(s || '').replace(/[^\d.,-]/g, ''); if (/,\d{1,2}$/.test(s)) s = s.replace(/\./g, '').replace(',', '.'); else s = s.replace(/,/g, ''); return +s || 0; };
+  const isoDate = s => { s = String(s || '').trim(); if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s; const m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); return m ? `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}` : ''; };
+  const statusOf = r => (r.paid ? 'Paid' : r.due >= REF ? 'Pending' : 'Overdue');
+
+  const toRows = txt => { const t = parseCSV(txt.replace(/^﻿/, '')); const H = t.shift().map(h => h.trim());
+    const need = ['Expense ID', 'Description', 'Category', 'Due Date', 'Amount (USD)', 'Paid Date']; const miss = need.filter(h => !H.includes(h));
+    if (miss.length) throw new Error('missing columns: ' + miss.join(', '));
+    const ix = k => H.indexOf(k), g = (r, k) => (ix(k) >= 0 ? (r[ix(k)] || '').trim() : '');
+    return t.filter(r => g(r, 'Expense ID')).map(r => { const o = { id: g(r, 'Expense ID'), desc: g(r, 'Description'), cat: g(r, 'Category'), owner: g(r, 'Payment Owner'), method: g(r, 'Payment Method'), freq: g(r, 'Frequency'),
+      due: isoDate(g(r, 'Due Date')), amount: num(g(r, 'Amount (USD)')), paid: isoDate(g(r, 'Paid Date')), sheetStatus: g(r, 'Status'), notes: g(r, 'Notes') };
+      o.status = statusOf(o); o.month = o.due.slice(0, 7); return o; }).filter(o => o.due); };
+
+  const sum = R => Math.round(R.reduce((s, r) => s + r.amount, 0) * 100) / 100;
+  const pct = (a, b) => (b ? (a / b * 100) : 0) + '%';
+
+  const render = () => {
+    const R = ALL.filter(r => r.month === cur), by = s => R.filter(r => r.status === s);
+    const total = sum(R), paid = sum(by('Paid')), pend = sum(by('Pending')), over = sum(by('Overdue')), openBal = Math.round((pend + over) * 100) / 100;
+    $('finMonth').textContent = longMonth(cur);
+    $('finCount').textContent = R.length ? `${R.length} entries · by due date` : 'No entries this month';
+    $('finTotal').textContent = USD.format(total);
+    $('finPaid').textContent = USD.format(paid); $('finPaidN').textContent = `${by('Paid').length} paid`;
+    $('finOpen').textContent = USD.format(openBal); $('finPendN').textContent = `${by('Pending').length} pending · ${by('Overdue').length} overdue`;
+    $('barP').style.width = pct(paid, total); $('barN').style.width = pct(pend, total); $('barO').style.width = pct(over, total);
+    const ov = $('finOver'); ov.className = 'over' + (over ? '' : ' none');
+    ov.innerHTML = over ? `<span>Overdue within the open balance</span><b>${USD.format(over)}</b>` : '<span>No overdue amount this month</span><span>—</span>';
+    const diff = Math.round((total - paid - openBal) * 100) / 100;
+    $('finCheck').innerHTML = diff === 0 ? `Check: total = paid + open balance <b>✓</b>` : `Check failed: difference ${USD.format(diff)}`;
+    $('finPrev').disabled = cur <= months[0]; $('finNext').disabled = cur >= months[months.length - 1];
+    // list
+    document.querySelectorAll('#fin .chip').forEach(c => { const s = c.dataset.s; c.setAttribute('aria-pressed', String(s === fStatus)); c.textContent = (s || 'All') + ' (' + (s ? by(s).length : R.length) + ')'; });
+    const L = R.filter(r => (!fStatus || r.status === fStatus) && (!fCat || r.cat === fCat)).sort((a, b) => a.due.localeCompare(b.due) || a.desc.localeCompare(b.desc));
+    $('finList').innerHTML = L.length ? L.map(r => { const k = r.status.toLowerCase(), isOpen = open.has(r.id); const late = r.status === 'Overdue' ? Math.round((new Date(REF) - new Date(r.due)) / 864e5) : 0;
+      return `<div class="item is-${k}${isOpen ? ' open' : ''}"><button type="button" aria-expanded="${isOpen}" aria-controls="d-${r.id}" data-id="${r.id}">
+        <span class="d">${esc(r.desc)}</span><span class="a">${USD.format(r.amount)}</span>
+        <span class="m">${esc(r.cat)} · due ${dateLabel(r.due).replace(/, \d{4}$/, '')}</span><span class="badge b-${k}">${r.status}</span></button>
+        <div class="det" id="d-${r.id}"><dl><dt>Expense ID</dt><dd>${esc(r.id)}</dd><dt>Due date</dt><dd>${dateLabel(r.due)}${late ? ` · ${late} days overdue` : ''}</dd><dt>Paid date</dt><dd>${r.paid ? dateLabel(r.paid) : 'Not paid yet'}</dd>
+        <dt>Payment owner</dt><dd>${esc(r.owner || '—')}</dd><dt>Method</dt><dd>${esc(r.method || '—')}</dd><dt>Frequency</dt><dd>${esc(r.freq || '—')}</dd>${r.notes ? `<dt>Notes</dt><dd>${esc(r.notes)}</dd>` : ''}</dl></div></div>`; }).join('')
+      : `<div class="empty">No ${fStatus ? fStatus.toLowerCase() + ' ' : ''}entries${fCat ? ' in ' + esc(fCat) : ''} for ${longMonth(cur)}.</div>`;
+    // chart: selected month + 5 previous
+    const span = [...Array(6)].map((_, i) => shiftMonth(cur, i - 5));
+    const tot = span.map(m => { const X = ALL.filter(r => r.month === m); return { m, n: X.length, t: sum(X), p: sum(X.filter(r => r.status === 'Paid')), pe: sum(X.filter(r => r.status === 'Pending')), o: sum(X.filter(r => r.status === 'Overdue')) }; });
+    const max = Math.max(1, ...tot.map(x => x.t));
+    $('finBars').innerHTML = tot.map(x => `<button type="button" class="col${x.m === cur ? ' sel' : ''}${x.n ? '' : ' nodata'}" data-m="${x.m}" ${x.n ? '' : 'disabled'} aria-label="${longMonth(x.m)}: ${x.n ? USD.format(x.t) : 'no records'}">
+      <span class="val">${x.n ? '$' + (x.t / 1000).toFixed(1) + 'k' : '—'}</span>
+      <span class="stack" style="height:${x.n ? Math.max(4, x.t / max * 100) : 30}%">${x.n ? `<i class="p" style="height:${pct(x.p, x.t)}"></i><i class="n" style="height:${pct(x.pe, x.t)}"></i><i class="o" style="height:${pct(x.o, x.t)}"></i>` : ''}</span>
+      <span class="ml">${MON[+x.m.slice(5, 7) - 1]}</span></button>`).join('');
+  };
+
+  const fillCats = () => { const cats = [...new Set(ALL.map(r => r.cat))].sort(); $('finCat').innerHTML = '<option value="">All categories</option>' + cats.map(c => `<option>${esc(c)}</option>`).join(''); $('finCat').value = fCat; };
+
+  const load = async () => {
+    $('finErr').textContent = ''; $('finRefresh').disabled = true;
+    const tryUrl = async (u, label) => { const r = await fetch(u + (u.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' }); if (!r.ok) throw new Error('HTTP ' + r.status); const rows = toRows(await r.text()); if (!rows.length) throw new Error('no rows'); return [rows, label]; };
+    try {
+      let res; try { res = await tryUrl(root.dataset.csv, 'demo Google Sheet (published CSV)'); } catch (e) { res = await tryUrl(root.dataset.fallback, 'demo CSV in the GitHub repository'); }
+      [ALL] = res; $('finSrc').textContent = res[1];
+      months = [...new Set(ALL.map(r => r.month))].sort();
+      if (!months.includes(cur)) cur = months[months.length - 1];
+      const mism = ALL.filter(r => r.sheetStatus && r.sheetStatus !== r.status).length;
+      if (mism) $('finErr').textContent = `${mism} entries have a Status in the sheet that differs from the rule; the dashboard shows the rule-based status.`;
+      $('finLoaded').textContent = new Date().toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      fillCats(); render();
+    } catch (e) { $('finErr').textContent = 'Could not load the demo data (' + e.message + '). Try “Refresh data”.'; $('finCount').textContent = 'Data not loaded'; }
+    finally { $('finRefresh').disabled = false; }
+  };
+
+  $('finRef').textContent = dateLabel(REF);
+  $('finPrev').addEventListener('click', () => { cur = shiftMonth(cur, -1); open.clear(); render(); });
+  $('finNext').addEventListener('click', () => { cur = shiftMonth(cur, 1); open.clear(); render(); });
+  root.addEventListener('click', e => {
+    const chip = e.target.closest('.chip'); if (chip) { fStatus = chip.dataset.s; render(); return; }
+    const col = e.target.closest('.col'); if (col && !col.disabled) { cur = col.dataset.m; open.clear(); render(); return; }
+    const it = e.target.closest('.item > button'); if (it) { const id = it.dataset.id; open.has(id) ? open.delete(id) : open.add(id); render(); const b = document.querySelector(`#fin .item > button[data-id="${id}"]`); if (b) b.focus(); }
+  });
+  $('finCat').addEventListener('change', e => { fCat = e.target.value; render(); });
+  $('finRefresh').addEventListener('click', load);
+  document.addEventListener('keydown', e => { if (e.target.closest && e.target.closest('input,select,textarea')) return; if (!root.contains(document.activeElement) && document.activeElement !== document.body) return;
+    if (e.key === 'ArrowLeft' && !$('finPrev').disabled) $('finPrev').click(); if (e.key === 'ArrowRight' && !$('finNext').disabled) $('finNext').click(); });
+  load();
+})();
+</script>
+<!-- WIDGET END -->
+</body>
+</html>
